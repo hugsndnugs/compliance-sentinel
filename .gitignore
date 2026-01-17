@@ -82,6 +82,7 @@ celerybeat.pid
 
 # mkdocs
 /site
+.cache
 
 # mypy
 .mypy_cache/

@@ -1,0 +1,75 @@
+site_name: Discord Legal Compliance Generator
+site_description: A Discord bot that automatically generates legal and compliance documents for Discord servers
+site_author: Discord Legal Compliance Generator Contributors
+site_url: https://YOUR_USERNAME.github.io/discord-legal-compliance-generator
+
+repo_name: discord-legal-compliance-generator
+repo_url: https://github.com/YOUR_USERNAME/discord-legal-compliance-generator
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/installation.md
+    - getting-started/configuration.md
+  - Usage:
+    - usage/commands.md
+    - usage/examples.md
+  - Customization:
+    - customization/templates.md
+    - customization/adding-documents.md
+  - API Reference:
+    - api/reference.md
+  - Troubleshooting: troubleshooting.md
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+strict: true
